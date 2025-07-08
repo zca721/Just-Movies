@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rating</title>
+
+  <!-- Bootswatch Cyborg Theme -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.0/dist/cyborg/bootstrap.min.css" />
+  <link rel="icon" type="image/png" href="pics/Movies-icon.png" sizes="32x32" />
+
+  <style>
+    body {
+      padding: 20px;
+      position: relative;
+      min-height: 100vh;
+      
+      color: white;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #444;
+    }
+
+     .left-section {
+      margin-left: 40px;
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      height: 36px;
+      margin-right:40px;
+      
+    }
+
+    .navbar, .navbar * {
+      margin-left:0;
+      border: none !important;
+      box-shadow: none !important;
+      outline: none !important;
+    }
+
+
+    .middle-section {
+      flex: 1;
+      max-width: 500px;
+      display: flex;
+      align-items: stretch;
+      border-radius: 999px;
+      overflow: hidden;
+      background-color: #222;
+      border: 1px solid #444;
+    }
+
+    .middle-section:has(.search-bar:focus) {
+      box-shadow: 0 0 0 2px #c80d0d;
+    }
+
+    .search-bar {
+      flex: 1;
+      padding: 10px 16px;
+      border: none;
+      outline: none;
+      background-color: transparent;
+      color: white;
+      font-size: 1rem;
+    }
+
+    .search-button {
+      background-color: #333;
+      border: none;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .search-icon {
+      height: 20px;
+      width: 20px;
+    }
+
+     .search-button:hover {
+      background-color: #666;
+    }
+
+    .right-section {
+      margin-right: 20px;
+    }
+
+    
+    .streaming-logo {
+      display: flex;
+      justify-content: center;
+      overflow-x: auto;
+      gap: 16px;
+      padding: 16px 0;
+      
+    }
+
+    
+
+    .streaming-link {
+      flex: 0 0 auto;
+    }
+
+    .streaming-link img {
+      height: 60px;
+      width: auto;
+      border-radius: 10px;
+      object-fit: contain;
+    }
+
+    .custom-search-button {
+      margin-top: 10px;
+      font-size: 1rem;
+      border-radius: 8px;
+    }
+
+
+    .card, .card-body {
+      background-color: transparent !important;
+      border: none !important;
+    }
+
+    .table tr {
+      background-color: transparent !important;
+    }
+
+    .table td {
+      color: white;
+    }
+
+    .card-body {
+      max-width: 450px; 
+      margin: 0 auto;
+         
+    }
+
+   
+
+
+  </style>
+</head>
+
+<body>
+
+  
+ <header class="header">
+    <div class="left-section">
+      <img class="logo" src="pics/Movies.png" alt="Just Movies Logo" />
+  
+
+      <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+ 
+      <div class="collapse navbar-collapse" id="navbarColor02">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="movies.html">Movies</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="genre.html">Genre</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="ranking.html">Ranking</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="rating.html">Rating</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="user.html">User</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="StreamServices.html">Streaming Services</a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    
+     </nav>
+
+    </div>
+    <div class="middle-section">
+      <input class="search-bar" type="text" placeholder="Search" aria-label="Search for movies" />
+      <button class="search-button" aria-label="Search Button">
+        <img class="search-icon" src="pics/search-icon.png" alt="search icon" />
+      </button>
+    </div>
+
+    <div class="right-section">
+      <button type="button" class="btn btn-danger">Sign in</button>
+    </div>
+  </header>
+
+ 
+  <main>
+
+   <nav class="streaming-logo">
+
+
+    <div class="streaming-link">
+    <a href="https://www.netflix.com" target="_blank">
+      <img src="pics/netflix-logo.jpg" alt="Netflix">
+    </a>
+    </div>
+
+    <div class="streaming-link">
+    <a href="https://www.disneyplus.com" target="_blank">
+      <img src="pics/Disney-logo.png" alt="Disney+">
+    </a>
+    </div>
+
+    <div class="streaming-link">
+    <a href="https://www.primevideo.com" target="_blank">
+      <img src="pics/PrimeVideo-Logo.png" alt="Prime Video">
+    </a>
+    </div>
+
+   <div class="streaming-link">
+    <a href="https://tv.apple.com" target="_blank">
+      <img src="pics/AppleTV-logo.png" alt="Apple TV+">
+    </a>
+    </div>
+
+    <div class="streaming-link">
+    <a href="https://www.hulu.com" target="_blank">
+      <img src="pics/hulu-logo.png" alt="Hulu">
+    </a>
+    </div>
+
+    <div class="streaming-link">
+    <a href="https://www.peacocktv.com" target="_blank">
+      <img src="pics/peacock-logo.png" alt="Peacock">
+    </a>
+    </div>
+
+
+    <div class="streaming-link">
+    <a href="https://www.paramountplus.com" target="_blank">
+      <img src="pics/Paramount_Plus-logo.png" alt="Paramount">
+    </a>
+    </div>
+
+    <div class="streaming-link">
+    <a href="https://tubitv.com/" target="_blank">
+      <img src="pics/tubi-logo.webp" alt="Tubi">
+    </a>
+    </div>
+    
+
+    <div class="streaming-link">
+    <a href="https://www.max.com" target="_blank">
+      <img src="pics/Max-logo.jpg" alt="Max">
+    </a>
+    </div>
+
+    <div class="streaming-link">
+    <a href="https://www.youtube.com" target="_blank">
+      <img src="pics/Youtube-logo.png" alt="Youtube">
+    </a>
+    </div>
+
+
+  </nav>
+
+    <!-- Search Form -->
+
+    <!---- SQL Query 4: Use a FULL OUTER JOIN-->
+    <!---- Purpose: When the user selects a rating, list all movies with that rating (if any), and always include the rating value and description even if no movie uses it.-->
+    
+  <div class="container">
+     
+      <label for="ratingDropdown" class="form-label mt-4">Select a rating:</label>
+
+      <select class="form-select" id="userDropdown">
+        <option>select a rating</option>
+        
+      
+      </select>
+  </div>
+
+
+    <!-- Table for displaying results -->
+    <div class="card mb-3"  id="resultSection" style="display: none;">
+      <div class="card-body">
+       
+        <table class="table table-hover" id="resultsTable">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Rating</th>
+              <th>Description</th>
+            </tr>
+          </thead>
+          <tbody id = "resultsBody">
+            <!-- Results will be here-->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </main>
+
+  <!--JavaScript for handing form submission and displaying results-->
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+  const dropdown = document.getElementById('ratingDropdown');
+  const resultSection = document.getElementById('resultSection'); 
+  const resultTableBody = document.getElementById('resultTableBody');
+  try {
+  // Fetch user list for the dropdown menu
+      const response = await fetch('/rating'); // Backend endpoint 
+      const users = await response.json(); 
+      users.forEach(user => {
+        const option = document.createElement('option');
+        option.value = rating.Rating; // Set the rating as the value
+        option.textContent = `${rating.Rating}`; // Display rating
+        dropdown.appendChild(option);
+      });
+    } catch (error) {
+        console.error('Error fetching rating:', error); 
+    }
+// Automatically fetch and display rating details when rating  is selected
+dropdown.addEventListener('change', async (event) => { 
+  const Rating = event.target.value;
+  if (!Rating) {
+    resultSection.style.display = 'none'; // Hide results if rating is selected
+    return; 
+  }
+  try {
+    // Send a request to the backend to fetch works on details 
+    const response = await fetch(`/rating/details?Rating=${Rating}`); 
+    const data = await response.json();
+    resultTableBody.innerHTML = ''; // Clear previous results 
+    resultSection.style.display = 'block';
+    if (data.length > 0) {
+        const {Title,Rating,Description} = data[0]; 
+        resultTableBody.innerHTML = `
+            <tr>
+              <td>${Title}</td>
+              <td>${Rating}</td>
+              <td>${Description}</td>
+              
+            </tr>
+        `;
+    } else {
+        resultTableBody.innerHTML = `<tr><td colspan="3">No data found.</td></tr>`; 
+    }
+  } catch (error) {
+      console.error('Error fetching rating details:', error); 
+    }
+    });
+ });
+  </script>
+</body>
+</html>
+
