@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Just Movies</title>
+
+  <!-- Bootswatch Cyborg Theme -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.0/dist/cyborg/bootstrap.min.css" />
+
+  <link rel="icon" type="image/png" href="pics/Movies-icon.png" sizes="32x32" />
+
+  <style>
+    body {
+      padding: 20px;
+      position: relative;
+      min-height: 100vh;
+
+      color: white;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #444;
+    }
+
+    .left-section {
+      margin-left: 40px;
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      height: 36px;
+      margin-right: 40px;
+    }
+
+    .navbar,
+    .navbar * {
+      margin-left: 0;
+      border: none !important;
+      box-shadow: none !important;
+      outline: none !important;
+    }
+
+
+    .middle-section {
+      flex: 1;
+      max-width: 500px;
+      display: flex;
+      align-items: stretch;
+      border-radius: 999px;
+      overflow: hidden;
+      background-color: #222;
+      border: 1px solid #444;
+
+    }
+
+    .middle-section:has(.search-bar:focus) {
+      box-shadow: 0 0 0 2px #c80d0d;
+    }
+
+    .search-bar {
+      flex: 1;
+      padding: 10px 16px;
+      border: none;
+      outline: none;
+      background-color: transparent;
+      color: white;
+      font-size: 1rem;
+    }
+
+    .search-button {
+      background-color: #333;
+      border: none;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .search-icon {
+      height: 20px;
+      width: 20px;
+    }
+
+
+
+    .search-button:hover {
+      background-color: #666;
+    }
+
+
+
+    .right-section {
+      margin-right: 20px;
+
+    }
+
+
+
+    .background {
+      position: absolute;
+      top: 100px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      object-fit: cover;
+      z-index: -1;
+      opacity: 0.25;
+
+    }
+
+    .text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+      z-index: 1;
+      padding: 20px;
+    }
+
+    .discover-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    .group-name {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      color: white;
+      font-size: 0.95rem;
+      opacity: 0.85;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <div class="left-section">
+      <img class="logo" src="pics/Movies.png" alt="Just Movies Logo" />
+
+
+      <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+ 
+      <div class="collapse navbar-collapse" id="navbarColor02">
+        <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="index.html">Home
+          
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="query1.html">User</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="query2.html">Movies</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="query3.html">Genre</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="query4.html">Streaming Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="query5.html">Ranking</a>
+          </li>
+          
+        
+        
+        </ul>
+      
+      </div>
+  
+      </nav>
+    </div>
+
+
+    <div class="middle-section">
+      <input class="search-bar" type="text" placeholder="Search" aria-label="Search for movies" />
+      <button class="search-button" aria-label="Search Button">
+        <img class="search-icon" src="pics/search-icon.png" alt="search icon" />
+      </button>
+    </div>
+
+
+    <div class="right-section">
+      <button type="button" class="btn btn-danger">Login</button>
+      <a href="query6.html">
+        <button type="button" class="btn btn-danger">Sign Up</button>
+      </a>
+    </div>
+  </header>
+  </header>
+
+
+
+
+  <main>
+    <img class="background" src="pics/background-movies.jpg" alt="Movie-themed background" />
+
+
+
+    <div class="text">
+      <h1>Welcome to Just Movies</h1>
+
+      <p>Your all-in-one guide to what to watch and where to watch it.</p>
+      <p>Stop switching apps. Start streaming smarter.</p>
+
+      <div class="discover-buttons">
+        <a href="query2.html" class="btn btn-danger">Discover Movies</a>
+        <a href="query4.html" class="btn btn-secondary">Streaming Services</a>
+      </div>
+
+    </div>
+
+
+    <div class="group-name">
+      <p>This website is made by</p>
+      <p>Cathy Che, Grace Park, Tiffany Morales and Zachary Anderson</p>
+    </div>
+
+
+
+  </main>
+
+
+</body>
+
+</html>
